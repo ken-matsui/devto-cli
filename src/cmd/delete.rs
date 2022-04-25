@@ -19,6 +19,8 @@ pub(crate) fn exec(title: &String, devto_token: String) -> Result<()> {
     }
     let article = get_matched_article(matched.unwrap().id, devto_token)?;
 
+    // TODO: Delete the article locally
+
     println!("Opening the default OS web browser due to no delete DEV API ...");
     webbrowser::open(
         format!(
