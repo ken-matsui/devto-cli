@@ -10,9 +10,7 @@ You can install this using the `cargo install` command:
 $ cargo install devto-cli
 ```
 
-## Usage
-
-### Configuration
+## Configuration
 
 You need to export your dev.to token to use.
 
@@ -26,12 +24,12 @@ Or you can pass the token as an option:
 $ devto new your-new-article-title --devto-token your_token
 ```
 
-#### Obtain a dev.to token
+### Obtain a dev.to token
 
 1. Go to `Settings` > `Account` > `DEV Community API Keys`
 2. Enter description and click on `Generate API Key`
 
-### Generate a repository template
+## Generate a repository template
 
 ```bash
 $ devto start
@@ -43,7 +41,7 @@ You can now start writing your articles:
     devto new your-article-title
 ```
 
-### Create a new article
+## Create a new article
 
 ```bash
 devto-content/$ devto new your-new-article-title
