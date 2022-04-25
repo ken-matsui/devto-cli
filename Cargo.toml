@@ -1,6 +1,6 @@
 [package]
 name = "devto-cli"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 description = "A CLI tool to manage dev.to articles"
@@ -14,6 +14,7 @@ documentation = "https://docs.rs/devto-cli"
 anyhow = "1.0"
 clap = { version = "3.1", features = ["derive", "env"] }
 convert_case = "0.5"
+dialoguer = "0.10"
 http = "0.2"
 inflections = "1.1"
 serde = { version = "1.0", features = ["derive"] }

@@ -14,8 +14,11 @@ pub(crate) struct Config {
     pub(crate) relative_path_to_article: String,
 }
 
-fn write_config(config: Vec<Config>) -> Result<()> {
-    let file = OpenOptions::new().write(true).open(CONFIG_PATH)?;
+pub(crate) fn write_config(config: Vec<Config>) -> Result<()> {
+    let file = OpenOptions::new()
+        .write(true)
+        .truncate(true)
+        .open(CONFIG_PATH)?;
     let mut writer = BufWriter::new(file);
 
     serde_json::to_writer_pretty(&mut writer, &config)?;
