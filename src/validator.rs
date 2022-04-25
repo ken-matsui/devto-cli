@@ -5,7 +5,7 @@ use inflections::case::is_kebab_case;
 
 use crate::config::CONFIG_PATH;
 
-pub(crate) fn basic(title: &String) -> Result<()> {
+pub(crate) fn basic(title: &str) -> Result<()> {
     if !is_kebab_case(title) {
         bail!("Title must be in kebab-case");
     }

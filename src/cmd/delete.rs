@@ -1,5 +1,4 @@
 use anyhow::{bail, Result};
-use webbrowser;
 
 use crate::api::get_matched_article;
 use crate::template::article_file_path;
