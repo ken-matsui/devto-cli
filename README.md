@@ -14,7 +14,7 @@ $ cargo install devto-cli
 
 ### Configuration
 
-You may need to export your dev.to token when using some scripts.
+You need to export your dev.to token to use.
 
 ```bash
 $ export DEVTO_TOKEN=your_token
@@ -25,6 +25,11 @@ Or you can pass the token as an option:
 ```bash
 $ devto new your-new-article-title --devto-token your_token
 ```
+
+#### Obtain a dev.to token
+
+1. Go to `Settings` > `Account` > `DEV Community API Keys`
+2. Enter description and click on `Generate API Key`
 
 ### Create a new article
 
