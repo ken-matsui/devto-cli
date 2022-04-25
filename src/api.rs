@@ -33,3 +33,34 @@ pub(crate) fn create_draft(title: &String, devto_token: String) -> Result<u32> {
     }
     Ok(response.json::<Response>()?.id)
 }
+
+#[derive(Deserialize, Debug, Clone)]
+pub(crate) struct DevToUser {
+    pub(crate) username: String,
+}
+
+#[derive(Deserialize, Debug, Clone)]
+pub(crate) struct Article {
+    id: u32,
+    pub(crate) slug: String,
+    pub(crate) user: DevToUser,
+}
+
+pub(crate) fn get_matched_article(article_id: u32, devto_token: String) -> Result<Article> {
+    let mut response = Request::get("https://dev.to/api/articles/me/unpublished")
+        .header("api-key", devto_token)
+        .body(())?
+        .send()?;
+
+    if response.status() != StatusCode::OK {
+        bail!("Could not retrieve article info: {}", response.text()?);
+    }
+
+    let articles = response.json::<Vec<Article>>()?;
+    let matched = articles.iter().find(|&x| x.id == article_id);
+    if matched.is_none() {
+        bail!("Could not find the article with id: {article_id}");
+    }
+
+    Ok(matched.unwrap().clone())
+}

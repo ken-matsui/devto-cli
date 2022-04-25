@@ -49,6 +49,12 @@ You can now start writing your articles:
 devto-content/$ devto new your-new-article-title
 ```
 
+## Delete an unpublished article
+
+```bash
+devto-content/$ devto delete your-unpublised-article-title
+```
+
 ## Contribution
 
 ### Build

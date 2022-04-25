@@ -1,6 +1,6 @@
 [package]
 name = "devto-cli"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 description = "A CLI tool to manage dev.to articles"
@@ -19,6 +19,7 @@ inflections = "1.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 isahc = { version = "1.7", features = ["json"] }
+webbrowser = "0.7"
 
 [[bin]]
 name = "devto"

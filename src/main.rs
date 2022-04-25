@@ -3,6 +3,7 @@ mod cmd;
 mod config;
 mod consts;
 mod template;
+mod validator;
 
 use anyhow::Result;
 use clap::{Parser, Subcommand};
@@ -26,6 +27,9 @@ enum Commands {
 
     /// Create a new article
     New { title: String },
+
+    /// Delete an unpublished article
+    Delete { title: String },
 }
 
 fn main() -> Result<()> {
@@ -33,7 +37,7 @@ fn main() -> Result<()> {
 
     match &cli.command {
         Commands::Start => cmd::start::exec(),
-
         Commands::New { title } => cmd::new::exec(title, cli.devto_token),
+        Commands::Delete { title } => cmd::delete::exec(title, cli.devto_token),
     }
 }

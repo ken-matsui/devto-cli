@@ -9,9 +9,9 @@ pub(crate) const CONFIG_PATH: &str = "./dev-to-git.json";
 
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
-struct Config {
-    id: u32,
-    relative_path_to_article: String,
+pub(crate) struct Config {
+    pub(crate) id: u32,
+    pub(crate) relative_path_to_article: String,
 }
 
 fn write_config(config: Vec<Config>) -> Result<()> {
@@ -22,7 +22,7 @@ fn write_config(config: Vec<Config>) -> Result<()> {
     Ok(())
 }
 
-fn read_config() -> Result<Vec<Config>> {
+pub(crate) fn read_config() -> Result<Vec<Config>> {
     let file = File::open(CONFIG_PATH)?;
     let reader = BufReader::new(file);
 
