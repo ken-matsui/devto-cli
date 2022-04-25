@@ -1,4 +1,4 @@
-# devto-cli
+# devto-cli [![crates.io version](https://img.shields.io/crates/v/devto-cli.svg)](https://crates.io/crates/devto-cli) [![crates.io downloads](https://img.shields.io/crates/d/devto-cli.svg)](https://crates.io/crates/devto-cli)
 
 A CLI tool to manage dev.to articles similar to [Zenn CLI](https://www.npmjs.com/package/zenn-cli)
 
