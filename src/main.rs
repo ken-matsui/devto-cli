@@ -30,6 +30,9 @@ enum Commands {
 
     /// Delete an unpublished article
     Delete { title: String },
+
+    /// Preview a draft article
+    Preview { title: String },
 }
 
 fn main() -> Result<()> {
@@ -39,5 +42,6 @@ fn main() -> Result<()> {
         Commands::Start => cmd::start::exec(),
         Commands::New { title } => cmd::new::exec(title, cli.devto_token),
         Commands::Delete { title } => cmd::delete::exec(title, cli.devto_token),
+        Commands::Preview { title } => cmd::preview::exec(title, cli.devto_token),
     }
 }

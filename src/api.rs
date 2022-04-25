@@ -64,3 +64,24 @@ pub(crate) fn get_matched_article(article_id: u32, devto_token: String) -> Resul
 
     Ok(matched.unwrap().clone())
 }
+
+pub(crate) fn update_article(id: u32, content: String, devto_token: String) -> Result<Article> {
+    let data = json!({
+        "article": {
+            "body_markdown": content,
+        }
+    })
+    .to_string();
+
+    let mut response = Request::put(format!("https://dev.to/api/articles/{id}"))
+        .header("Content-Type", "application/json")
+        .header("api-key", devto_token)
+        .body(data.as_str())?
+        .send()?;
+
+    if response.status() != StatusCode::OK {
+        bail!("Could not update article info: {}", response.text()?);
+    }
+
+    Ok(response.json::<Article>()?)
+}

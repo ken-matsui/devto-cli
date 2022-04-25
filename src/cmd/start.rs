@@ -77,6 +77,7 @@ $ devto new your-new-article-title
 
 # Markdown Syntax
 
+* https://dev.to/p/editor_guide
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 * https://github.com/maxime1992/dev.to#how-do-i-add-images-to-my-blog-posts
 * `{% embed https://... %}`

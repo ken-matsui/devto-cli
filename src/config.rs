@@ -43,3 +43,9 @@ pub(crate) fn update_config(article_id: u32, article_file: PathBuf) -> Result<()
     write_config(config)?;
     Ok(())
 }
+
+pub(crate) fn get_article_index(config: &[Config], article_file: String) -> Option<usize> {
+    config
+        .iter()
+        .position(|x| x.relative_path_to_article == article_file)
+}

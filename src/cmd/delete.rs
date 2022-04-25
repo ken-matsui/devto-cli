@@ -4,7 +4,7 @@ use std::fs;
 use std::path::PathBuf;
 
 use crate::api::{get_matched_article, Article};
-use crate::config::{write_config, Config};
+use crate::config::{get_article_index, write_config, Config};
 use crate::template::article_file_path;
 
 fn delete_online(article: Article) -> Result<()> {
@@ -53,10 +53,7 @@ pub(crate) fn exec(title: &String, devto_token: String) -> Result<()> {
         .into_string()
         .unwrap();
     let config = crate::config::read_config()?;
-    match config
-        .iter()
-        .position(|x| x.relative_path_to_article == article_file)
-    {
+    match get_article_index(&config, article_file) {
         None => bail!("Could not find the article with title: {title}"),
         Some(found) => {
             println!(
