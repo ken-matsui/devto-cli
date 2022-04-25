@@ -2,9 +2,17 @@
 
 A CLI tool to manage dev.to articles similar to [Zenn CLI](https://www.npmjs.com/package/zenn-cli)
 
-# Usage
+## Installation
 
-## Configuration
+You can install this using the `cargo install` command:
+
+```bash
+$ cargo install devto-cli
+```
+
+## Usage
+
+### Configuration
 
 You may need to export your dev.to token when using some scripts.
 
@@ -15,13 +23,13 @@ $ export DEVTO_TOKEN=your_token
 Or you can pass the token as an option:
 
 ```bash
-$ cargo run new your-new-article-title --devto-token your_token
+$ devto new your-new-article-title --devto-token your_token
 ```
 
-## Create a new article
+### Create a new article
 
 ```bash
-$ cargo run new your-new-article-title
+$ devto new your-new-article-title
 ```
 
 ## Contribution
