@@ -12,3 +12,7 @@ inflections = "1.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 isahc = { version = "1.7", features = ["json"] }
+
+[[bin]]
+name = "devto"
+path = "src/main.rs"
