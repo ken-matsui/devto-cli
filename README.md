@@ -1,6 +1,6 @@
 # devto-cli
 
-A CLI tool to manage dev.to articles like [Zenn CLI](https://www.npmjs.com/package/zenn-cli)
+A CLI tool to manage dev.to articles similar to [Zenn CLI](https://www.npmjs.com/package/zenn-cli)
 
 # Usage
 
@@ -22,4 +22,40 @@ $ cargo run new your-new-article-title --devto-token your_token
 
 ```bash
 $ cargo run new your-new-article-title
+```
+
+## Contribution
+
+### Build
+
+```bash
+$ cargo build
+```
+
+Or you can directly execute the binary:
+
+```bash
+$ cargo run
+```
+
+### Test
+
+```bash
+$ cargo build
+$ cargo test
+```
+
+### Publish
+
+#### [GitHub Releases](https://github.com/ken-matsui/jyt/tags)
+
+```bash
+$ git tag v0.1.0
+$ git push origin v0.1.0
+```
+
+#### [crates.io](https://crates.io/)
+
+```bash
+$ cargo publish
 ```
