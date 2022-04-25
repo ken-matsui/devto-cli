@@ -1,1 +1,1 @@
-pub(crate) const BASE_DIR: &str = "./articles";
+pub(crate) const BASE_DIR: &str = "articles";
