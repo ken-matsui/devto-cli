@@ -21,6 +21,9 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    /// Create a template repository that manages dev.to articles
+    Start,
+
     /// Create a new article
     New { title: String },
 }
@@ -29,6 +32,8 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match &cli.command {
+        Commands::Start => cmd::start::exec(),
+
         Commands::New { title } => cmd::new::exec(title, cli.devto_token),
     }
 }

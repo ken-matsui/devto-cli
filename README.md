@@ -31,10 +31,22 @@ $ devto new your-new-article-title --devto-token your_token
 1. Go to `Settings` > `Account` > `DEV Community API Keys`
 2. Enter description and click on `Generate API Key`
 
+### Generate a repository template
+
+```bash
+$ devto start
+Creating `devto-content` ...
+
+You can now start writing your articles:
+    cd devto-content
+    git init
+    devto new your-article-title
+```
+
 ### Create a new article
 
 ```bash
-$ devto new your-new-article-title
+devto-content/$ devto new your-new-article-title
 ```
 
 ## Contribution

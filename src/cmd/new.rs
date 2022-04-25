@@ -1,4 +1,4 @@
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 use anyhow::{bail, Result};
 use inflections::case::is_kebab_case;
@@ -9,6 +9,9 @@ use crate::consts::BASE_DIR;
 pub(crate) fn exec(title: &String, devto_token: String) -> Result<()> {
     if !is_kebab_case(title) {
         bail!("Title must be in kebab-case");
+    }
+    if !Path::new(CONFIG_PATH).exists() {
+        bail!("Could not find config file: {CONFIG_PATH}");
     }
 
     let article_file: PathBuf = [BASE_DIR, title, format!("{}.md", title).as_str()]
