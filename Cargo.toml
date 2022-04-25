@@ -2,6 +2,13 @@
 name = "devto-cli"
 version = "0.1.0"
 edition = "2021"
+authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
+description = "A CLI tool to manage dev.to articles"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ken-matsui/devto-cli/"
+homepage = "https://github.com/ken-matsui/devto-cli#readme"
+documentation = "https://docs.rs/devto-cli"
 
 [dependencies]
 anyhow = "1.0"
