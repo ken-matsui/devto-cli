@@ -53,7 +53,7 @@ devto-content/$ devto new your-new-article-title
 devto-content/$ devto delete your-unpublised-article-title
 ```
 
-## Preview an article
+## Preview a draft article
 
 ```bash
 devto-content/$ devto preview your-draft-article-title
