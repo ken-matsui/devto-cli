@@ -46,9 +46,9 @@ jobs:
 
 https://dev.to/your-dev-id
 
-# Usage
+## Usage
 
-## Configuration
+### Configuration
 
 You need to export your dev.to token when using some scripts.
 
@@ -62,27 +62,27 @@ Or you can pass the token as an option:
 $ devto new your-new-article-title --devto-token your_token
 ```
 
-## Create a new article
+### Create a new article
 
 ```bash
 $ devto new your-new-article-title
 ```
 
-## Publish an article
+### Publish an article
 
 > You should [set secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) on your GitHub repository
 
 1. Change the `publish` to true in front matter
 2. Commit the changes and push it to your GitHub repository
 
-# Markdown Syntax
+## Markdown Syntax
 
 * https://dev.to/p/editor_guide
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 * https://github.com/maxime1992/dev.to#how-do-i-add-images-to-my-blog-posts
 * `{% embed https://... %}`
 
-# Note
+## Note
 
 * Committed new revisions, after being published, will be automatically applied by [`dev-to-git`](https://www.npmjs.com/package/dev-to-git)
 "#,
