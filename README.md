@@ -94,3 +94,7 @@ $ git push origin v0.1.0
 ```bash
 $ cargo publish
 ```
+
+### References
+
+* https://developers.forem.com/api
