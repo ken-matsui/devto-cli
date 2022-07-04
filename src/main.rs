@@ -16,7 +16,7 @@ struct Cli {
     command: Commands,
 
     /// dev.to token
-    #[clap(short, long, env = "DEVTO_TOKEN")]
+    #[clap(short, long, value_parser, env = "DEVTO_TOKEN")]
     pub devto_token: String,
 }
 
@@ -26,13 +26,22 @@ enum Commands {
     Start,
 
     /// Create a new article
-    New { title: String },
+    New {
+        #[clap(value_parser)]
+        title: String,
+    },
 
     /// Delete an unpublished article
-    Delete { title: String },
+    Delete {
+        #[clap(value_parser)]
+        title: String,
+    },
 
     /// Preview a draft article
-    Preview { title: String },
+    Preview {
+        #[clap(value_parser)]
+        title: String,
+    },
 }
 
 fn main() -> Result<()> {
