@@ -12,7 +12,7 @@ documentation = "https://docs.rs/devto-cli"
 
 [dependencies]
 anyhow = "1.0"
-clap = { version = "4.3", features = ["derive", "env"] }
+clap = { version = "4.4", features = ["derive", "env"] }
 convert_case = "0.6"
 dialoguer = "0.10"
 frontmatter = "0.4"
